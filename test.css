@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("/assets/fonts/Rubik-VariableFont_wght.ttf");
+}
+
+:root {
+    --themeMain: #006fbe;
+}
+
+:root {
+    --paddingMini: 2.8rem;
+    --paddingMedium: 5rem;
+}
+
+body * {
+    font-family: "Rubik", sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+.flex.column {
+    flex-direction: column;
+}
+.flex.centered {
+    align-items: center;
+}
+
+h1 {
+    font-family: "Rubik", sans-serif;
+    margin-top: 0;
+}
+
+aside {
+    position: fixed;
+    display: flex;
+
+    left: 0;
+    top: 0;
+
+    padding: var(--paddingMini);
+
+    height: 100vh;
+
+    color: #fff;
+
+    background-color: rgba(0, 111, 190, 0.8);
+
+    transform: translateX(-100%);
+    transition: .7s ease;
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+aside.active {
+    transform: translateX(0);
+}
+
+aside #closeMenu {
+    align-self: flex-end;
+}
