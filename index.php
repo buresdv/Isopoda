@@ -21,6 +21,11 @@
     </aside>
 </body>
 <script src="globals.js"></script>
+<script src="helperFunctions.js"></script>
+
+<script src="canvasInitializer.js"></script>
+<script src="mouseHandler.js"></script>
+
 <script src="common.js"></script>
 <script src="renderer.js"></script>
 <script src="interaction.js"></script>

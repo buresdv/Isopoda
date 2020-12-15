@@ -1,14 +1,6 @@
-// TODO: Zprovoznit tohle. Kód funguje a správně rozpoznává pozici myši, ale je třeba přidat, aby kód poznal, kdy je myš nad isopodem
-canvas.addEventListener('mousemove', function(e) {
-    let mouseX = Math.round(e.clientX - canvasDimensions.left);
-    let mouseY = Math.round(e.clientY - canvasDimensions.top);
-})
-
 canvas.addEventListener('click', function (e) {
-    let mouseX = Math.round(e.clientX - canvasDimensions.left);
-    let mouseY = Math.round(e.clientY - canvasDimensions.top);
-
-    drawFood(mouseX, mouseY);
+    drawFood(mouse.x, mouse.y);
+    console.log(`Food placed at ${mouse.x}, ${mouse.y}`)
     // addFood(mouseX, mouseY);
 })
 
@@ -20,12 +12,9 @@ function openMenu() {
     <p>Age: ${randomIsopod.age}</p>
     <p>Happiness: ${randomIsopod.happiness}</p>
     <p>Hunger: ${randomIsopod.hunger}</p>
+    <h3>I am at ${randomIsopod.locX}, ${randomIsopod.locY}</h3>
     `
 }
 function closeMenu() {
     document.querySelector('aside').classList.remove('active');
 }
-
-/*function addFood(mouseX, mouse Y) {
-    drawFood();
-}*/
