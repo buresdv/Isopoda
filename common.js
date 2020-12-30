@@ -42,6 +42,10 @@ class Isopod {
             this.isopodDrawSize = 3;
         }
     }
+    openClickedIsopod() {
+        canvas.addEventListener('click', function (e) {
+        });
+    }
 }
 class Environment {
     constructor(humidity, darkness, cleanliness) {
